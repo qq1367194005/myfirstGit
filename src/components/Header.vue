@@ -6,9 +6,10 @@
                     <img class="logo" src="/img/logo.png" alt="Lao王博客" />
                 </router-link>
                 <router-link to="/" class="logo navbar-logo-m visible-xs">Lao王博客</router-link>
+                <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" >&#xe667;</a>
                 <nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
                     <ul class="cl">
-                        <li class="active"> <router-link to="/">主页</router-link> </li>
+                        <li> <router-link to="/">主页</router-link> </li>
                         <li> <router-link to="/aboutme">关于我</router-link> </li>
                         <li> <router-link to="/gossip">闲言碎语</router-link> </li>
                     </ul>
@@ -41,4 +42,15 @@ export default {
 @import "/plugin/pifu/pifu.css";
 @import "/css/common.css";
 
+.router-link-exact-active{
+    color: #000!important;
+}
+.nav-collapse ul li:hover{
+    -webkit-animation: rightThenLeft 0.5s linear;
+}
+@-webkit-keyframes rightThenLeft { 
+   0% {margin-left: 0;}
+   50%{margin-left:5px;}
+   100%{margin-left:0;}
+}
 </style>
