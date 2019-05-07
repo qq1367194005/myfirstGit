@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="height:45px">
         <div class="navbar navbar-fixed-top">
             <div class="container cl">
                 <router-link to="/" class="navbar-logo hidden-xs">
