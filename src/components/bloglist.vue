@@ -5,11 +5,13 @@
                 <a href="#" class="pic">
                     <img class="lazyload" src="/temp/art.jpg" alt="应该选" />
                 </a>
-                <h4 class="title"><a href="article_detail.html">个人博客应该选择什么样的域名和域名后缀</a></h4>
+                <h4 class="title">
+                    <router-link :to="'/bloginfo/'+id">个人博客应该选择什么样的域名和域名后缀</router-link>
+                </h4>
                 <div class="date_hits">
                     <span>老王</span>
                     <span>2017-02-24</span>
-                    <span><a href="/article-lists/10.html">程序人生</a></span>
+                    <span><a href="">程序人生</a></span>
                     <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
                     <p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span class="cy_cmt_count">20</span></p>
                 </div>
@@ -18,11 +20,13 @@
             
             
             <li class="index_arc_item no_pic">
-                <h4 class="title"><a href="/article/5.html">个人博客应该选择什么样的域名和域名后缀</a></h4>
+                <h4 class="title">
+                    <router-link to="/bloginfo/1">个人博客应该选择什么样的域名和域名后缀</router-link>
+                </h4>
                 <div class="date_hits">
                     <span>老王</span>
                     <span>2个月前</span>
-                    <span><a href="/article-lists/10.html">建站</a></span>
+                    <span><a href="">建站</a></span>
                     <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276 °</p>
                     <p class="commonts"><i class="Hui-iconfont" title="点击量">&#xe622;</i> <span id="sourceId::105" class="cy_cmt_count">20</span></p>
                 </div>
@@ -41,7 +45,12 @@
 
 <script>
 export default {
-    name:'blogList'
+    name:'blogList',
+    data(){
+        return {
+            id:2
+        }
+    }
 }
 </script>
 

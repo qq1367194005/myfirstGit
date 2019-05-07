@@ -4,8 +4,8 @@
             <div class="swiperbanner">
                 <swiper :options="swiperOption" ref="mySwiper">
                     <!-- slides -->
-                    <swiper-slide><img src="/img/temp/banner1.jpg" alt=""></swiper-slide>
-                    <swiper-slide><img src="/img/temp/banner8.png" alt=""></swiper-slide>
+                    <!-- <swiper-slide><img src="/img/temp/banner1.jpg" alt=""></swiper-slide> -->
+                    <swiper-slide><img src="img/temp/banner8.png" alt=""></swiper-slide>
                     <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
                     <!-- <div class="swiper-button-prev" slot="button-prev"></div> -->
                     <!-- <div class="swiper-button-next" slot="button-next"></div> -->

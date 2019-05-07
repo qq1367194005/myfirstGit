@@ -7,7 +7,7 @@ export default {
     name:'gossip',
 }
 </script>
-
+    
 <style>
 
 </style>

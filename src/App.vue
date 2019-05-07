@@ -12,7 +12,13 @@ export default {
   name: 'app',
   components: {
     Header
-  }
+  },
+  created(){
+
+  },
+  methods: {
+      
+  },
 }
 </script>
 

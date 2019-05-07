@@ -3,7 +3,7 @@
         <div class="navbar navbar-fixed-top">
             <div class="container cl">
                 <router-link to="/" class="navbar-logo hidden-xs">
-                    <img class="logo" src="/img/logo.png" alt="Lao王博客" />
+                    <img class="logo" src="img/logo.png" alt="Lao王博客" />
                 </router-link>
                 <router-link to="/" class="logo navbar-logo-m visible-xs">Lao王博客</router-link>
                 <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" >&#xe667;</a>
