@@ -3,11 +3,11 @@
         <div class="navbar navbar-fixed-top">
             <div class="container cl">
                 <router-link to="/" class="navbar-logo hidden-xs">
-                    <img class="logo" src="img/logo.png" alt="Lao王博客" />
+                    <img class="logo" src="img/logo.png" alt="小七博客" />
                 </router-link>
-                <router-link to="/" class="logo navbar-logo-m visible-xs">Lao王博客</router-link>
-                <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:void(0);" >&#xe667;</a>
-                <nav class="nav navbar-nav nav-collapse w_menu" role="navigation">
+                <router-link to="/" class="logo navbar-logo-m visible-xs">小七博客</router-link>
+                <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" @click="showother" href="javascript:void(0);" >&#xe667;</a>
+                <nav :class="[{'show':ismobel },'navbar-nav nav nav-collapse w_menu']" role="navigation">
                     <ul class="cl">
                         <li> <router-link to="/">主页</router-link> </li>
                         <li> <router-link to="/aboutme">关于我</router-link> </li>
@@ -32,7 +32,16 @@
 
 <script>
 export default {
-
+    data(){
+        return {
+            ismobel:false
+        }
+    },
+    methods: {
+        showother:function(){
+            this.ismobel = !this.ismobel;
+        }
+    },
 }
 </script>
 
@@ -52,5 +61,8 @@ export default {
    0% {margin-left: 0;}
    50%{margin-left:5px;}
    100%{margin-left:0;}
+}
+.show{
+    display:inline-block!important;
 }
 </style>

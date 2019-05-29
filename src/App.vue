@@ -13,9 +13,7 @@ export default {
   components: {
     Header
   },
-  created(){
-
-  },
+  
   methods: {
       
   },
@@ -29,6 +27,6 @@ html,body{
   margin:0;
 }
 body{
-  background: rgb(244, 244, 244);
+  /* background: rgb(180, 101, 101); */
 }
 </style>

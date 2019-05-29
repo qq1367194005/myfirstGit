@@ -50,7 +50,10 @@ export default {
         return {
             id:2
         }
-    }
+    },
+    created(){
+        window.console.log(this.unit.ajax("/Getbloglist/getinfobyId",{id:1,page:1,limit:10}))
+    },
 }
 </script>
 
