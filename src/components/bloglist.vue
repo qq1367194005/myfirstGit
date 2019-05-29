@@ -44,8 +44,9 @@ export default {
         }
     },
     created(){
-        var requestdata = this.unit.ajax("/Getbloglist/alllist",{page:1,limit:10})
-        window.console.log(requestdata);
+        this.unit.ajax("/Getbloglist/alllist",{page:1,limit:10}).then((data) => {
+            window.console.log(data);
+        })
     },
     methods: {
         

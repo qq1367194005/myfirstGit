@@ -8,7 +8,7 @@ export default {
     ajax(url,data) {
         return Vue.http.jsonp("http://shop.sirentoy.com/api"+url,{params:data}).then(function(result){
             return result.body;
-        }).promise;
+        });
     },
     pathip
 
