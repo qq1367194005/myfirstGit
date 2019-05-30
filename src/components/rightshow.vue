@@ -6,7 +6,7 @@
                 <div class="slideTxtBox">
                     <div class="bd">
                         <ul>
-                            <li><a href="javascript:void(0);">Lao博客测试版上线，欢迎访问</a></li>
+                            <li><a href="javascript:void(0);">小七博客测试版上线，欢迎访问</a></li>
                             <li><a href="javascript:void(0);">内容如有侵犯，请立即联系管理员删除</a></li>
                             <li><a href="javascript:void(0);">本站内容仅供学习和参阅，不做任何商业用途</a></li>
                         </ul>
@@ -20,49 +20,20 @@
             </div>
             <div class="tab-category-item">
                 <ul class="index_recd">
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：王风宇</li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：JavaWeb开发</li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a href="mailto:wfyv@qq.com">wfyv@qq.com</a></li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：安徽 &middot; 合肥</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：李红赟</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：php开发</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a href="1367194005@qq.com">1367194005@qq.com</a></li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：山西 &middot; 运城</li>
                 </ul>
             </div>
         </div>
-        <div class="bg-fff box-shadow radius mb-20">
-			<div class="tab-category">
-				<a href=""><strong>热门推荐</strong></a>
-			</div>
-			<div class="tab-category-item">
-				<ul class="index_recd">
-					<li>
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">阻止a标签href默认跳转事件</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-					<li >
-						<a href="#">PHP面试题汇总</a>
-						<p class="hits"><i class="Hui-iconfont" title="点击量">&#xe622;</i> 276 </p>
-					</li>
-				</ul>
-			</div>
-		</div>
         <div class="bg-fff box-shadow radius mb-20">
             <div class="tab-category">
                 <a href=""><strong>点击排行</strong></a>
             </div>
             <div class="tab-category-item">
                 <ul class="index_recd clickTop">
-                    <li>
+                    <!-- <li>
                         <a href="#">AJAX的刷新和前进后退问题解决</a>
                         <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
                     </li>
@@ -89,7 +60,7 @@
                     <li>
                         <a href="#">AJAX的刷新和前进后退问题解决</a>
                         <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
