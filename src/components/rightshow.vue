@@ -20,10 +20,10 @@
             </div>
             <div class="tab-category-item">
                 <ul class="index_recd">
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：李红赟</li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：php开发</li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a href="1367194005@qq.com">1367194005@qq.com</a></li>
-                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：山西 &middot; 运城</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe653;</i>姓名：{{config.adminname}}</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe70d;</i>职业：{{config.profession}}</li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe63b;</i>邮箱：<a :href="'mailto:'+config.emall">{{config.emall}}</a></li>
+                    <li class="index_recd_item"><i class="Hui-iconfont">&#xe671;</i>定位：{{config.site}}</li>
                 </ul>
             </div>
         </div>
@@ -33,6 +33,12 @@
             </div>
             <div class="tab-category-item">
                 <ul class="index_recd clickTop">
+                    <li v-for="item in blogtop" v-bind:key="item.id">
+                        <!-- <a :href="'/bloginfo/'+item.id">{{item.titletext}}</a> -->
+                        <a href="javascript:;" @click="changeinfo(item.id)">{{item.titletext}}</a>
+                        <!-- <router-link :to="'/bloginfo/'+item.id">{{item.titletext}}</router-link> -->
+                        <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> {{item.looknumnumber}}° </p>
+                    </li>
                     <!-- <li>
                         <a href="#">AJAX的刷新和前进后退问题解决</a>
                         <p class="hits"><i class="Hui-iconfont" title="点击量">&#xe6c1;</i> 276° </p>
@@ -74,10 +80,10 @@
 		</div>
 		<div class="bg-fff box-shadow radius mb-20">
 			<div class="tab-category">
-				<a href=""><strong>扫我关注</strong></a>
+				<a href=""><strong>加我好友</strong></a>
 			</div>
 			<div class="tab-category-item">
-				<!-- <img src="temp/gg.jpg" class="img-responsive lazyload" alt="响应式图片"> -->
+				<img v-for="item in config.aboutImg" v-bind:key="item" :src="unit.pathip+item" class="img-responsive lazyload" alt="响应式图片">
 			</div>
 		</div>
 		<div class="bg-fff box-shadow radius mb-20">
@@ -105,7 +111,30 @@
 
 <script>
 export default {
-    name:'rightshow'
+    name:'rightshow',
+    data(){
+        return {
+            config:[],
+            blogtop:[]
+        }
+    },
+    mounted:function(){
+        this.creatfun();
+    },
+    methods: {
+        changeinfo:function(id){
+            this.$router.push({name:'bloginfo',params: {id:id}});
+        },
+        creatfun:function(){
+            this.unit.ajax("/Getbloglist/getConfig",{}).then((data) => {
+                this.config = data.data;
+            })
+            this.unit.ajax("/Getbloglist/blogtop",{}).then((data) => {
+                this.blogtop = data.data;
+            })
+        },
+        
+    },
 }
 </script>
 

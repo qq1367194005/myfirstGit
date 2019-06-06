@@ -21,7 +21,9 @@
                                 <ul class="dropDown-menu menu radius box-shadow">
                                     <li><a href="/app/loginOut">退出</a></li>
                                 </ul>-->
-                                <a href="/app/qq" onclick="layer.msg('正在通过QQ登入', {icon:16, shade: 0.1, time:0})" ><img class="avatar size-S" src="img/qq.jpg" title="登入">登入</a>
+                                <router-link to="/login">
+                                    <img class="avatar size-S" src="img/qq.jpg" title="登入">登入
+                                </router-link>
                         </li>
                     </ul>
                 </nav>
@@ -40,7 +42,7 @@ export default {
     methods: {
         showother:function(){
             this.ismobel = !this.ismobel;
-        }
+        },
     },
 }
 </script>

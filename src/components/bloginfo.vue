@@ -7,6 +7,7 @@
                         <h2 class="c_titile">{{bloginfo.titletext}}</h2>
                         <p class="box_c"><span class="d_time">发布时间：{{bloginfo.createtime}}</span><span>编辑：小七</span><span>阅读（{{bloginfo.looknumnumber}}）</span></p>
                         <div v-html="bloginfo.bloginfocontent">
+                            
                         </div>
                         <div class="nextinfo">
                             <p class="last">上一篇：<a href="#"></a></p>
@@ -79,15 +80,19 @@ export default {
     components: {
         rightshow
     },
-    created(){
-        this.unit.ajax("/Getbloglist/getinfobyId?id="+this.$route.params.id,{page:1,limit:10}).then((data) => {
-            window.console.log(data);
-            this.bloginfo = data.data[0];
-        })
+    mounted:function(){
+        this.creatfun();
     },
-    methods: {
-        
+
+    methods:{
+        creatfun:function(){
+            this.unit.ajax("/Getbloglist/getinfobyId?id="+this.$route.params.id,{page:1,limit:10}).then((data) => {
+                window.console.log(data);
+                this.bloginfo = data.data[0];
+            })
+        }
     },
+   
 }
 </script>
 

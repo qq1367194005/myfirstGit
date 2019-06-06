@@ -19,8 +19,8 @@
             </li>
         </ul>
         <div class="text-c mb-20" id="moreBlog">
-            <a class="btn  radius btn-block " href="javascript:;" onclick="moreBlog();">点击加载更多</a>
-            <a class="btn  radius btn-block hidden" href="javascript:;">加载中……</a>
+            <a :class="[{'hidden':!requesttype },'btn  radius btn-block']" href="javascript:;" @click="moreBlog">点击加载更多</a>
+            <a :class="[{'hidden':requesttype },'btn  radius btn-block']" href="javascript:;">加载中……</a>
         </div>
     </div>
 </template>
@@ -34,17 +34,30 @@ export default {
                 {
                     
                 }
-            ]
+            ],
+            page:1,
+            limit:10,
+            requesttype:true
         }
     },
-    created(){
-        this.unit.ajax("/Getbloglist/alllist",{page:1,limit:10}).then((data) => {
-            window.console.log(data);
-            this.bloglist = data.data;
-        })
+    mounted:function(){
+        this.creatfun();
     },
     methods: {
-        
+        moreBlog:function(){
+            this.requesttype = !this.requesttype;
+            this.page = this.page+1;
+            this.unit.ajax("/Getbloglist/alllist",{page:this.page,limit:this.limit}).then((data) => {
+                this.bloglist = this.bloglist.concat(data.data);
+                this.requesttype = !this.requesttype;
+            })
+        },
+        creatfun:function(){
+            this.unit.ajax("/Getbloglist/alllist",{page:this.page,limit:this.limit}).then((data) => {
+                this.bloglist = data.data;
+            })
+        }
+
     },
 }
 </script>

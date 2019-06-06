@@ -10,6 +10,7 @@ Vue.use(VueResource)
 Vue.prototype.unit = unit
 
 Vue.config.productionTip = false
+window.router=router
 
 new Vue({
   render: h => h(App),
