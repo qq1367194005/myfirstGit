@@ -21,8 +21,11 @@
                                 <ul class="dropDown-menu menu radius box-shadow">
                                     <li><a href="/app/loginOut">退出</a></li>
                                 </ul>-->
-                                <router-link to="/login">
+                                <router-link to="/login" v-if="nickname == null">
                                     <img class="avatar size-S" src="img/qq.jpg" title="登入">登入
+                                </router-link>
+                                <router-link to="/" v-else>
+                                    {{nickname}}
                                 </router-link>
                         </li>
                     </ul>
@@ -36,8 +39,12 @@
 export default {
     data(){
         return {
-            ismobel:false
+            ismobel:false,
+            nickname:sessionStorage.getItem("username")
         }
+    },
+    mounted:function(){
+        
     },
     methods: {
         showother:function(){

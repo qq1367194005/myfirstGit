@@ -27,6 +27,9 @@ export default {
 html,body{
   padding:0;
   margin:0;
+  background: url(/img/001.png)!important;
 }
+
+
 
 </style>

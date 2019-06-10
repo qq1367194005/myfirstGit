@@ -83,7 +83,13 @@ export default {
     mounted:function(){
         this.creatfun();
     },
+    watch: {
 
+        //监听相同路由下参数变化的时候，从而实现异步刷新
+        '$route'() {
+            this.creatfun();
+        },
+    },
     methods:{
         creatfun:function(){
             this.unit.ajax("/Getbloglist/getinfobyId?id="+this.$route.params.id,{page:1,limit:10}).then((data) => {

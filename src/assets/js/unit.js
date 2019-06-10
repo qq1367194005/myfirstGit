@@ -3,6 +3,7 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 var pathip = 'https://shop.sirentoy.com';
+var userInfo = "";
 export default {
     // 解决跨域的 vue 请求
     ajax(url,data) {
@@ -10,6 +11,6 @@ export default {
             return result.body;
         });
     },
-    pathip
+    pathip,userInfo
 }
 
