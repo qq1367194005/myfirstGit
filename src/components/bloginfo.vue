@@ -20,6 +20,10 @@
                     <div class="tab-category">
                         <a href=""><strong>评论区</strong></a>
                     </div>
+                    <div  style="padding:0 10px;">
+                        <div id="SOHUCS"></div>
+                    </div>
+                    
                     <div class="panel-body">
                         <div class="panel-body" style="margin: 0 3%;">
                             <div class="mb-20">
@@ -82,12 +86,14 @@ export default {
     },
     mounted:function(){
         this.creatfun();
+        this.unit.creatcomment();
     },
     watch: {
 
         //监听相同路由下参数变化的时候，从而实现异步刷新
         '$route'() {
             this.creatfun();
+            this.unit.creatcomment();
         },
     },
     methods:{

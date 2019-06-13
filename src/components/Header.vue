@@ -26,6 +26,7 @@
                                 </router-link>
                                 <router-link to="/" v-else>
                                     {{nickname}}
+                                    <span @click="person">个人中心</span>
                                 </router-link>
                         </li>
                     </ul>
@@ -50,6 +51,11 @@ export default {
         showother:function(){
             this.ismobel = !this.ismobel;
         },
+        person:function(){
+            this.unit.ajax("/user/index",{}).then((data) => {
+                window.console.log(data);
+            })
+        }
     },
 }
 </script>
