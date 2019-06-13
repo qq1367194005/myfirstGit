@@ -52,7 +52,7 @@ export default {
             this.ismobel = !this.ismobel;
         },
         person:function(){
-            this.unit.ajax("/user/index",{}).then((data) => {
+            this.unit.ajax("/user/index",{token:sessionStorage.getItem("token")}).then((data) => {
                 window.console.log(data);
             })
         }
