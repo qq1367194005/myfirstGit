@@ -27,6 +27,7 @@
                                 <router-link to="/" v-else>
                                     {{nickname}}
                                     <span @click="person">个人中心</span>
+                                    <span @click="logout">注销</span>
                                 </router-link>
                         </li>
                     </ul>
@@ -51,9 +52,24 @@ export default {
         showother:function(){
             this.ismobel = !this.ismobel;
         },
+
         person:function(){
-            this.unit.ajax("/user/index",{token:sessionStorage.getItem("token")}).then((data) => {
-                window.console.log(data);
+            this.unit.ajax("/Userinfo/getuserinfo",{token:sessionStorage.getItem("token")}).then((data) => {
+                if(data.code != 1){
+                    alert(data.msg);
+                    sessionStorage.removeItem("token");
+                    sessionStorage.removeItem("username");
+                    this.nickname = null;
+                }
+            })
+        },
+        logout:function(){
+            this.unit.ajax("/user/logout",{token:sessionStorage.getItem("token")}).then((data) => {
+                if(data.code==1){
+                    sessionStorage.removeItem("token");
+                    sessionStorage.removeItem("username");
+                    this.nickname = null;
+                }
             })
         }
     },
