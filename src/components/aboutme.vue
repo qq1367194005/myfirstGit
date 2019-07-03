@@ -1,55 +1,36 @@
 <template>
-    <div class="test_two_box">
-        <video
-        id="myVideo"
-        class="video-js"
-        ref='video' controls
-        >
-        <source
-            type="video/mp4"
-        >
-        </video>
+    <div class="myinfo" v-html="config.myinfo">
+        
     </div>
-    </template>
+</template>
 
-    <script>
-    /* eslint-disable */
-    export default {
+<script>
+/* eslint-disable */
+export default {
     name: "aboutme",
     data() {
         return {
-
+            config:[]
         };
     },
     mounted() { 
-        // this.$refs.video.src = "//vjs.zencdn.net/v/oceans.mp4"
-        this.insertdata();
-        this.initVideo();
+        this.creatfun();
     },
     methods: {
-        insertdata(){
-            this.videosrc = "//vjs.zencdn.net/v/oceans.mp4";
+        creatfun:function(){
+            this.unit.ajax("/Getbloglist/getConfig",{}).then((data) => {
+                this.config = data.data;
+            })
         },
-        initVideo() {
-            //初始化视频方法
-                let myPlayer = this.$video(myVideo, {
-                    //确定播放器是否具有用户可以与之交互的控件。没有控件，启动视频播放的唯一方法是使用autoplay属性或通过Player API。
-                    controls: true,
-                    //自动播放属性,muted:静音播放
-                    autoplay: "muted",
-                    //建议浏览器是否应在<video>加载元素后立即开始下载视频数据。
-                    preload: "auto",
-                    //设置视频播放器的显示宽度（以像素为单位）
-                    width: "800px",
-                    //设置视频播放器的显示高度（以像素为单位）
-                    height: "400px",
-                });
-                myPlayer.src(this.videosrc);
-                myPlayer.play(); 
-            }   
-        }
-    };
-    </script>
+    }
+};
+</script>
 
-    <style scoped>
-    </style>
+<style scoped>
+.myinfo{
+    max-width: 1230px;
+    margin: 0 auto;
+    min-height: 800px;
+    margin-top: 10px;
+}
+</style>

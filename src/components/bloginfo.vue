@@ -27,32 +27,7 @@
                     <div class="panel-body">
                         <div class="panel-body" style="margin: 0 3%;">
                             <div class="mb-20">
-                                <!-- <ul class="commentList">
-                                    <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://qzapp.qlogo.cn/qzapp/101388738/1CF8425D24660DB8C3EBB76C03D95F35/100"></i></a>
-                                        <div class="comment-main">
-                                            <header class="comment-header">
-                                                <div class="comment-meta"><a class="comment-author" href="#">老王</a>
-                                                    <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">2014-8-31 15:20</time>
-                                                </div>
-                                            </header>
-                                            <div class="comment-body">
-                                                <p> 是的</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="item cl"> <a href="#"><i class="avatar size-L radius"><img alt="" src="http://qzapp.qlogo.cn/qzapp/101388738/696C8A17B3383B88804BA92ECBAA5D81/100"></i></a>
-                                        <div class="comment-main">
-                                            <header class="comment-header">
-                                                <div class="comment-meta"><a class="comment-author" href="#">老王</a>
-                                                    <time title="2014年8月31日 下午3:20" datetime="2014-08-31T03:54:20" class="f-r">2014-8-31 15:20</time>
-                                                </div>
-                                            </header>
-                                            <div class="comment-body">
-                                                <p> +1</p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul> -->
+                            
                             </div>
                             <div class="line"></div>
                            
@@ -109,5 +84,7 @@ export default {
 </script>
 
 <style>
-
+    img{
+        max-width: 100%;
+    }
 </style>

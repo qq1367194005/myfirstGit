@@ -48,6 +48,13 @@ export default {
     mounted:function(){
         
     },
+    watch: {
+
+        //监听相同路由下参数变化的时候，从而实现异步刷新
+        '$route'() {
+            this.nickname = sessionStorage.getItem("username");
+        },
+    },
     methods: {
         showother:function(){
             this.ismobel = !this.ismobel;
